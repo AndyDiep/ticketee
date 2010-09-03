@@ -57,5 +57,8 @@ Ticketee::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
   
   root :to => "projects#index"
-  resources :projects
+  resources :projects do
+	  resources :tickets
+  end
+  
 end
